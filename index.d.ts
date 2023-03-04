@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StyleProp, ViewProps, ViewStyle } from 'react-native';
 
 export interface CardStackProps {
+  children: JSX.Element | JSX.Element[];
   style?: StyleProp<ViewStyle>;
   secondCardZoom?: number;
   loop?: boolean;
@@ -38,6 +39,7 @@ export default class CardStack extends React.Component<CardStackProps> {
 }
 
 export interface CardProps {
+  children: JSX.Element | JSX.Element[];
   style?: StyleProp<ViewStyle>;
   onSwiped?: () => void;
   onSwipedLeft?: () => void;
